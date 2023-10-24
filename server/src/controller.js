@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
   },
 });
 
-export const fetch = async (req, res) => {
+const fetch = async (req, res) => {
   try {
     const response = await axiosInstance.get(
       "/science.json?api-key=286GFG9QA3Y5VdbHZRQNnaxj4U5yQGRr"
@@ -25,3 +25,5 @@ export const fetch = async (req, res) => {
     res.status(500).json(err);
   }
 };
+
+module.exports = {fetch}
